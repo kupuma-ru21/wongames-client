@@ -1,5 +1,5 @@
 name: Next_build
-on: pull_request
+on: [push, pull_request]
 jobs:
   next_build:
     name: Next_build
