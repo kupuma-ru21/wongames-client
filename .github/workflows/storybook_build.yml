@@ -1,8 +1,8 @@
-name: next_build
+name: storybook_build
 on: [push, pull_request]
 jobs:
-  next_build:
-    name: next_build
+  storybook_build:
+    name: storybook_build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,4 +16,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn install
-      - run: yarn build
+      - run: yarn storybook:test
