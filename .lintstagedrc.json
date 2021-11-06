@@ -2,7 +2,6 @@
   "src/**/*.{ts,tsx}": [
     "yarn lint --fix",
     "yarn test --findRelatedTests --bail",
-    "yarn prettier:write",
-    "yarn build-storybook"
+    "yarn prettier:write"
   ]
 }
