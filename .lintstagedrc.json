@@ -3,7 +3,6 @@
     "yarn lint --fix",
     "yarn test --findRelatedTests --bail",
     "yarn prettier:write",
-    "yarn compile:check",
     "yarn build-storybook"
   ]
 }
