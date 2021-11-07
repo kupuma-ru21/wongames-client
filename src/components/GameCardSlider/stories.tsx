@@ -52,7 +52,7 @@ export default {
   title: 'GameCardSlider',
   component: GameCardSlider,
   args: { items },
-  parameters: { layout: 'fullscreen', backgrounds: { default: 'dark' } },
+  parameters: { layout: 'fullscreen', backgrounds: { default: 'won-dark' } },
 } as Meta;
 
 export const Default: Story<GameCardProps[]> = (args) => (

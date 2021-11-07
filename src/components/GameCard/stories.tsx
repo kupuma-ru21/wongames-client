@@ -5,6 +5,7 @@ import type { GameCardProps } from '.';
 export default {
   title: 'GameCard',
   component: GameCard,
+  parameters: { backgrounds: { default: 'won-dark' } },
   args: {
     title: 'Population Zero',
     developer: 'Rockstar Games',
