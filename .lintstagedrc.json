@@ -2,7 +2,7 @@
   "src/**/*.{ts,tsx}": [
     "yarn prettier:write",
     "yarn lint --fix",
-    "yarn compile:check",
+    "bash -c 'yarn compile:check'",
     "yarn test --findRelatedTests --bail"
   ]
 }

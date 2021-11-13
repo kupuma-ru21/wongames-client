@@ -16,7 +16,7 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "storybook:test": "start-storybook --ci --smoke-test",
     "build-storybook": "build-storybook -s ./public",
-    "compile:check": "tsc --project tsconfig.json --noEmit"
+    "compile:check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "11.1.2",
