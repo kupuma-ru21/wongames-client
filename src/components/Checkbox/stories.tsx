@@ -8,4 +8,6 @@ export default {
   argTypes: { onCheck: { action: 'checked' } },
 } as Meta;
 
-export const Default: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
+export const Default: Story<CheckboxProps> = (args) => (
+  <Checkbox {...args} isChecked />
+);
