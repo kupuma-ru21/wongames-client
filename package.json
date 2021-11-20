@@ -11,6 +11,7 @@
     "prettier:check": "prettier --check src",
     "prepare": "husky install",
     "test": "jest",
+    "test:ci": "jest --maxWorkers=2",
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p 6006",
