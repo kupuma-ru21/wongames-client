@@ -4,7 +4,7 @@ import TextField from '.';
 import type { TextFieldProps } from '.';
 
 export default {
-  title: 'TextField',
+  title: 'Form/TextField',
   component: TextField,
   args: {
     label: 'E-mail',
