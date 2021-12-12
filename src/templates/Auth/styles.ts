@@ -16,7 +16,7 @@ export const Wrapper = styled.main`
 export const BannerBlock = styled.div`
   ${({ theme }) => css`
     position: relative;
-    background-image: url(/img/auth-bg.jpg);
+    background-image: url(/img/auth-bg.jpeg);
     background-size: cover;
     background-position: center center;
     padding: ${theme.spacings.xxlarge} ${theme.spacings.xxlarge}
@@ -48,6 +48,10 @@ export const BannerContent = styled.div`
     height: 100%;
     position: relative;
     z-index: ${theme.layers.base};
+    a {
+      width: fit-content;
+      height: fit-content;
+    }
   `}
 `;
 
