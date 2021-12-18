@@ -7,6 +7,8 @@ export default {
   argTypes: { children: { type: 'string' } },
 } as Meta;
 
-export const Default: Story<HeadingProps> = (args) => <Heading {...args} />;
+export const Default: Story<HeadingProps> = (args) => {
+  return <Heading {...args} />;
+};
 
 Default.args = { children: 'Most Populars', color: 'black' };

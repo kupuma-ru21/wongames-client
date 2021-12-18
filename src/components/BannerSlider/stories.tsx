@@ -16,8 +16,10 @@ export default {
   },
 } as Meta;
 
-export const Default: Story<BannerSliderProps> = (args) => (
-  <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
-    <BannerSlider {...args} />
-  </div>
-);
+export const Default: Story<BannerSliderProps> = (args) => {
+  return (
+    <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
+      <BannerSlider {...args} />
+    </div>
+  );
+};

@@ -7,20 +7,22 @@ export type BaseTemplateProps = {
   children: React.ReactNode;
 };
 
-const Base = ({ children }: BaseTemplateProps) => (
-  <section>
-    <Container>
-      <Menu />
-    </Container>
-
-    {children}
-
-    <S.SectionFooter>
+const Base = ({ children }: BaseTemplateProps) => {
+  return (
+    <section>
       <Container>
-        <Footer />
+        <Menu />
       </Container>
-    </S.SectionFooter>
-  </section>
-);
+
+      {children}
+
+      <S.SectionFooter>
+        <Container>
+          <Footer />
+        </Container>
+      </S.SectionFooter>
+    </section>
+  );
+};
 
 export default Base;

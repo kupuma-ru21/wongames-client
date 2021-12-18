@@ -22,8 +22,10 @@ export default {
   },
 } as Meta;
 
-export const Default: Story<GameDetailsProps> = (args) => (
-  <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
-    <GameDetails {...args} />
-  </div>
-);
+export const Default: Story<GameDetailsProps> = (args) => {
+  return (
+    <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
+      <GameDetails {...args} />
+    </div>
+  );
+};

@@ -49,14 +49,16 @@ const settings: SliderSettings = {
   prevArrow: <ArrowLeft aria-label="previous games" />,
 };
 
-const GameCardSlider = ({ items, color = 'black' }: GameCardSliderProps) => (
-  <S.Wrapper color={color}>
-    <Slider settings={settings}>
-      {items.map((item, index) => (
-        <GameCard key={index} {...item} />
-      ))}
-    </Slider>
-  </S.Wrapper>
-);
+const GameCardSlider = ({ items, color = 'black' }: GameCardSliderProps) => {
+  return (
+    <S.Wrapper color={color}>
+      <Slider settings={settings}>
+        {items.map((item, index) => {
+          return <GameCard key={index} {...item} />;
+        })}
+      </Slider>
+    </S.Wrapper>
+  );
+};
 
 export default GameCardSlider;

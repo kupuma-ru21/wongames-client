@@ -4,26 +4,29 @@ import * as HeadingStyles from 'components/Heading/styles';
 import * as HighlightStyles from 'components/Highlight/styles';
 
 export const SectionBanner = styled.section`
-  ${({ theme }) => css`
-    margin: ${theme.spacings.large} calc(-${theme.grid.gutter} / 2);
+  ${({ theme }) => {
+    return css`
+      margin: ${theme.spacings.large} calc(-${theme.grid.gutter} / 2);
 
-    ${media.greaterThan('medium')`
+      ${media.greaterThan('medium')`
       margin: ${theme.spacings.large} 0;
       position: relative;
       z-index: ${theme.layers.base};
     `}
-  `}
+    `;
+  }}
 `;
 
 export const SectionNews = styled.div`
-  ${({ theme }) => css`
-    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+  ${({ theme }) => {
+    return css`
+      margin-bottom: calc(${theme.spacings.xxlarge} * 2);
 
-    ${media.greaterThan('large')`
+      ${media.greaterThan('large')`
       margin-top: -13rem;
     `}
 
-    ${media.greaterThan('medium')`
+      ${media.greaterThan('medium')`
       margin-bottom: 0;
       padding-top: 14rem;
       padding-bottom: 10rem;
@@ -34,13 +37,16 @@ export const SectionNews = styled.div`
         color: ${theme.colors.black};
       }
     `}
-  `}
+    `;
+  }}
 `;
 
 export const SectionUpcoming = styled.div`
-  ${({ theme }) => css`
-    ${HighlightStyles.Wrapper} {
-      margin-top: calc(${theme.spacings.xlarge} * 2);
-    }
-  `}
+  ${({ theme }) => {
+    return css`
+      ${HighlightStyles.Wrapper} {
+        margin-top: calc(${theme.spacings.xlarge} * 2);
+      }
+    `;
+  }}
 `;

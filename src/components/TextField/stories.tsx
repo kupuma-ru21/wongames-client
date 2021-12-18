@@ -17,16 +17,20 @@ export default {
   argTypes: { onInput: { action: 'changed' }, icon: { type: '' } },
 } as unknown as Meta;
 
-export const Default: Story<TextFieldProps> = (args) => (
-  <div style={{ maxWidth: 300, padding: 15 }}>
-    <TextField {...args} />
-  </div>
-);
+export const Default: Story<TextFieldProps> = (args) => {
+  return (
+    <div style={{ maxWidth: 300, padding: 15 }}>
+      <TextField {...args} />
+    </div>
+  );
+};
 
-export const withError: Story<TextFieldProps> = (args) => (
-  <div style={{ maxWidth: 300, padding: 15 }}>
-    <TextField {...args} />
-  </div>
-);
+export const withError: Story<TextFieldProps> = (args) => {
+  return (
+    <div style={{ maxWidth: 300, padding: 15 }}>
+      <TextField {...args} />
+    </div>
+  );
+};
 
 withError.args = { error: 'Ops...something is wrong' };

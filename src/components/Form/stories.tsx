@@ -4,4 +4,6 @@ export default {
   title: 'Form',
 } as Meta;
 
-export const Default: Story = () => <></>;
+export const Default: Story = () => {
+  return <></>;
+};

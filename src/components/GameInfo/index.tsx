@@ -13,25 +13,27 @@ export type GameInfoProps = {
   price: string;
 };
 
-const GameInfo = ({ title, description, price }: GameInfoProps) => (
-  <S.Wrapper>
-    <Heading color="black" lineBottom>
-      {title}
-    </Heading>
+const GameInfo = ({ title, description, price }: GameInfoProps) => {
+  return (
+    <S.Wrapper>
+      <Heading color="black" lineBottom>
+        {title}
+      </Heading>
 
-    <Ribbon color="secondary">{`$${price}`}</Ribbon>
+      <Ribbon color="secondary">{`$${price}`}</Ribbon>
 
-    <S.Description>{description}</S.Description>
+      <S.Description>{description}</S.Description>
 
-    <S.ButtonsWrapper>
-      <Button icon={<AddShoppingCart />} size="large">
-        Add to cart
-      </Button>
-      <Button icon={<FavoriteBorder />} size="large" minimal>
-        Wishlist
-      </Button>
-    </S.ButtonsWrapper>
-  </S.Wrapper>
-);
+      <S.ButtonsWrapper>
+        <Button icon={<AddShoppingCart />} size="large">
+          Add to cart
+        </Button>
+        <Button icon={<FavoriteBorder />} size="large" minimal>
+          Wishlist
+        </Button>
+      </S.ButtonsWrapper>
+    </S.Wrapper>
+  );
+};
 
 export default GameInfo;

@@ -8,11 +8,15 @@ export default {
   argTypes: { children: { type: 'string' }, icon: { type: '' } },
 } as unknown as Meta;
 
-export const Default: Story = (args) => <Button {...args} />;
+export const Default: Story = (args) => {
+  return <Button {...args} />;
+};
 
 Default.args = { children: 'Buy now' };
 
-export const withIcon: Story = (args) => <Button {...args} />;
+export const withIcon: Story = (args) => {
+  return <Button {...args} />;
+};
 
 withIcon.args = {
   size: 'small',
@@ -20,7 +24,9 @@ withIcon.args = {
   icon: <AddShoppingCart />,
 };
 
-export const asLink: Story = (args) => <Button {...args} />;
+export const asLink: Story = (args) => {
+  return <Button {...args} />;
+};
 
 asLink.args = {
   size: 'large',

@@ -17,7 +17,11 @@ const Menu = ({ username }: MenuProps) => {
   return (
     <S.Wrapper>
       <MediaMatch lessThan="medium">
-        <S.IconWrapper onClick={() => setIsOpen(true)}>
+        <S.IconWrapper
+          onClick={() => {
+            return setIsOpen(true);
+          }}
+        >
           <MenuIcon aria-label="Open Menu" />
         </S.IconWrapper>
       </MediaMatch>
@@ -50,7 +54,12 @@ const Menu = ({ username }: MenuProps) => {
       </S.MenuGroup>
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
+        <CloseIcon
+          aria-label="Close Menu"
+          onClick={() => {
+            return setIsOpen(false);
+          }}
+        />
         <S.MenuNav>
           <S.MenuLink href="#">Home</S.MenuLink>
           <S.MenuLink href="#">Explore</S.MenuLink>

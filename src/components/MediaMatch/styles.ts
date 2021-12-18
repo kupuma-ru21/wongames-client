@@ -10,19 +10,25 @@ export type MediaMatchProps = {
 };
 
 export const Wrapper = styled.div<MediaMatchProps>`
-  ${({ lessThan, greaterThan }) => css`
-    display: none;
-    ${!!lessThan && mediaMatchModifiers.lessThan(lessThan)}
-    ${!!greaterThan && mediaMatchModifiers.greaterThan(greaterThan)}
-  `}
+  ${({ lessThan, greaterThan }) => {
+    return css`
+      display: none;
+      ${!!lessThan && mediaMatchModifiers.lessThan(lessThan)}
+      ${!!greaterThan && mediaMatchModifiers.greaterThan(greaterThan)}
+    `;
+  }}
 `;
 
 const mediaMatchModifiers = {
-  lessThan: (size: breakpoint) => css`
-    ${media.lessThan(size)` display: block `}
-  `,
+  lessThan: (size: breakpoint) => {
+    return css`
+      ${media.lessThan(size)` display: block `}
+    `;
+  },
 
-  greaterThan: (size: breakpoint) => css`
-    ${media.greaterThan(size)` display: block `}
-  `,
+  greaterThan: (size: breakpoint) => {
+    return css`
+      ${media.greaterThan(size)` display: block `}
+    `;
+  },
 };

@@ -11,8 +11,10 @@ export default {
   parameters: { layout: 'fullscreen', backgrounds: { default: 'won-dark' } },
 } as Meta;
 
-export const Default: Story<GameCardProps[]> = (args) => (
-  <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
-    <GameCardSlider items={args} {...args} />
-  </div>
-);
+export const Default: Story<GameCardProps[]> = (args) => {
+  return (
+    <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
+      <GameCardSlider items={args} {...args} />
+    </div>
+  );
+};

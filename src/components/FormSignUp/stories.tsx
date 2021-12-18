@@ -6,8 +6,10 @@ export default {
   component: FormSignUp,
 } as Meta;
 
-export const Default: Story = () => (
-  <div style={{ width: 300, margin: 'auto' }}>
-    <FormSignUp />
-  </div>
-);
+export const Default: Story = () => {
+  return (
+    <div style={{ width: 300, margin: 'auto' }}>
+      <FormSignUp />
+    </div>
+  );
+};

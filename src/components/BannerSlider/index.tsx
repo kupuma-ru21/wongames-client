@@ -17,14 +17,16 @@ const settings: SliderSettings = {
   ],
 };
 
-const BannerSlider = ({ items }: BannerSliderProps) => (
-  <S.Wrapper>
-    <Slider settings={settings}>
-      {items.map((item) => {
-        return <Banner key={item.title} {...item} />;
-      })}
-    </Slider>
-  </S.Wrapper>
-);
+const BannerSlider = ({ items }: BannerSliderProps) => {
+  return (
+    <S.Wrapper>
+      <Slider settings={settings}>
+        {items.map((item) => {
+          return <Banner key={item.title} {...item} />;
+        })}
+      </Slider>
+    </S.Wrapper>
+  );
+};
 
 export default BannerSlider;

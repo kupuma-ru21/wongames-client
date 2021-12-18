@@ -46,19 +46,21 @@ const GlobalStyles: GlobalStyleComponent<
       box-sizing: inherit;
     }
   }
-  ${({ theme, removeBg }) => css`
-    html {
-      font-size: 62.5%;
-    }
-    body {
-      font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
-      ${!removeBg &&
-      css`
-        background-color: ${theme.colors.mainBg};
-      `}
-    }
-  `}
+  ${({ theme, removeBg }) => {
+    return css`
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-family: ${theme.font.family};
+        font-size: ${theme.font.sizes.medium};
+        ${!removeBg &&
+        css`
+          background-color: ${theme.colors.mainBg};
+        `}
+      }
+    `;
+  }}
 
 `;
 

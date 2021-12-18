@@ -11,16 +11,18 @@ export type ShowcaseProps = {
   games?: GameCardProps[];
 };
 
-const Showcase = ({ title, highlight, games }: ShowcaseProps) => (
-  <S.Wrapper>
-    {!!title && (
-      <Heading lineLeft lineColor="secondary">
-        {title}
-      </Heading>
-    )}
-    {!!highlight && <Highlight {...highlight} />}
-    {!!games && <GameCardSlider items={games} />}
-  </S.Wrapper>
-);
+const Showcase = ({ title, highlight, games }: ShowcaseProps) => {
+  return (
+    <S.Wrapper>
+      {!!title && (
+        <Heading lineLeft lineColor="secondary">
+          {title}
+        </Heading>
+      )}
+      {!!highlight && <Highlight {...highlight} />}
+      {!!games && <GameCardSlider items={games} />}
+    </S.Wrapper>
+  );
+};
 
 export default Showcase;

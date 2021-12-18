@@ -8,4 +8,6 @@ export default {
   parameters: { backgrounds: { default: 'won-dark' } },
 } as Meta;
 
-export const Default: Story<LogoProps> = (args) => <Logo {...args} />;
+export const Default: Story<LogoProps> = (args) => {
+  return <Logo {...args} />;
+};
