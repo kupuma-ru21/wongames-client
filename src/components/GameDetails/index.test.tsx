@@ -3,7 +3,7 @@ import GameDetails from '.';
 
 describe('<GameDetails />', () => {
   it.skip('should render the heading', () => {
-    const { container } = render(<GameDetails />);
+    const { container } = render(<GameDetails platforms={['linux']} />);
 
     expect(
       screen.getByRole('heading', { name: /GameDetails/i })
