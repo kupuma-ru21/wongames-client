@@ -12,12 +12,13 @@
     "prepare": "husky install",
     "test": "jest",
     "test:ci": "jest --maxWorkers=2",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "generate": "yarn plop --plopfile generators/plopfile.js && yarn prettier:write",
     "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p 6006",
     "storybook:test": "start-storybook --ci --smoke-test",
     "build-storybook": "build-storybook -s ./public",
-    "compile:check": "tsc --noEmit"
+    "compile:check": "tsc --noEmit",
+    "fix": "yarn lint --fix && yarn prettier:write"
   },
   "dependencies": {
     "@styled-icons/fa-brands": "^10.38.0",
