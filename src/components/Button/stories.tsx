@@ -6,7 +6,7 @@ export default {
   title: 'Button',
   component: Button,
   argTypes: { children: { type: 'string' }, icon: { type: '' } },
-} as Meta;
+} as unknown as Meta;
 
 export const Default: Story = (args) => <Button {...args} />;
 
