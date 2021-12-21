@@ -1,5 +1,7 @@
-import { forwardRef, type ForwardRefRenderFunction } from 'react';
-import SlickSlider, { type Settings } from 'react-slick';
+import { forwardRef } from 'react';
+import type { ForwardRefRenderFunction } from 'react';
+import SlickSlider from 'react-slick';
+import type { Settings } from 'react-slick';
 import * as S from './styles';
 
 export type SliderSettings = Settings;
