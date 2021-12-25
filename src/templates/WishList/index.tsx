@@ -1,9 +1,20 @@
 import Base from 'templates/Base';
-import { Container } from 'components/Container';
 import Heading from 'components/Heading';
+import Showcase from 'components/Showcase';
+import { Container } from 'components/Container';
+import type { GameCardProps } from 'components/GameCard';
+import type { HighlightProps } from 'components/Highlight';
 // import * as S from './styles';
 
-const Wishlist = () => {
+export type WishlistTemplateProps = {
+  recommendedGames: GameCardProps[];
+  recommendedHighlight: HighlightProps;
+};
+
+const Wishlist = ({
+  recommendedGames,
+  recommendedHighlight,
+}: WishlistTemplateProps) => {
   return (
     <Base>
       <Container>
@@ -11,6 +22,12 @@ const Wishlist = () => {
           Wishlist
         </Heading>
       </Container>
+
+      <Showcase
+        title="You may like these games"
+        games={recommendedGames}
+        highlight={recommendedHighlight}
+      />
     </Base>
   );
 };
