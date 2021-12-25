@@ -1,7 +1,16 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
+import { Container } from 'components/Container';
 
 type CoverProps = { src: string };
+
+export const Main = styled.main`
+  margin-top: 20rem;
+
+  ${media.greaterThan('medium')`
+    margin-top: 58rem;
+  `}
+`;
 
 export const Cover = styled.div<CoverProps>`
   ${({ src }) => {
@@ -23,3 +32,17 @@ export const Cover = styled.div<CoverProps>`
     `;
   }}
 `;
+
+const Section = styled(Container).attrs({ as: 'section' })`
+  ${({ theme }) => {
+    return css`
+      margin-bottom: ${theme.spacings.xlarge};
+
+      ${media.greaterThan('medium')`
+        margin-bottom: calc(${theme.spacings.xlarge} * 2);
+      `}
+    `;
+  }}
+`;
+
+export const SectionGameInfo = styled(Section)``;
