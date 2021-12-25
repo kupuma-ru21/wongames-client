@@ -6,13 +6,13 @@ import * as HighlightStyles from 'components/Highlight/styles';
 export const SectionBanner = styled.section`
   ${({ theme }) => {
     return css`
-      margin: ${theme.spacings.large} calc(-${theme.grid.gutter} / 2);
+      margin: 0 calc(-${theme.grid.gutter} / 2) ${theme.spacings.large};
 
       ${media.greaterThan('medium')`
-      margin: ${theme.spacings.large} 0;
-      position: relative;
-      z-index: ${theme.layers.base};
-    `}
+        margin-bottom: ${theme.spacings.large};
+        position: relative;
+        z-index: ${theme.layers.base};
+      `}
     `;
   }}
 `;
