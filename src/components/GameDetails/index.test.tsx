@@ -4,6 +4,7 @@ import GameDetails, { type GameDetailsProps } from '.';
 
 const props: GameDetailsProps = {
   developer: 'Different Tales',
+  publisher: 'Walktrough',
   platforms: ['windows', 'mac', 'linux'],
   releaseDate: '2020-11-21T23:00:00',
   rating: 'BR0',
@@ -51,6 +52,18 @@ describe('<GameDetails />', () => {
     renderWithTheme(<GameDetails {...props} />);
 
     expect(screen.getByText(/free/i)).toBeInTheDocument();
+  });
+
+  it('should render the developer', () => {
+    renderWithTheme(<GameDetails {...props} />);
+
+    expect(screen.getByText(/Different Tales/i)).toBeInTheDocument();
+  });
+
+  it('should render the publisher', () => {
+    renderWithTheme(<GameDetails {...props} />);
+
+    expect(screen.getByText(/walktrough/i)).toBeInTheDocument();
   });
 
   it('should render 18+ rating when BR18', () => {

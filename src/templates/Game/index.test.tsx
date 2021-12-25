@@ -9,6 +9,14 @@ describe('<Game />', () => {
         cover=""
         gameInfo={{ title: '', description: '', price: '' }}
         description=""
+        details={{
+          developer: '',
+          publisher: '',
+          platforms: [],
+          releaseDate: '',
+          rating: 'BR0',
+          genres: [],
+        }}
       />
     );
 
