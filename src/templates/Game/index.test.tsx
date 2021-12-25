@@ -5,7 +5,11 @@ import Game from '.';
 describe('<Game />', () => {
   it.skip('should render the heading', () => {
     const { container } = render(
-      <Game cover="" gameInfo={{ title: '', description: '', price: '' }} />
+      <Game
+        cover=""
+        gameInfo={{ title: '', description: '', price: '' }}
+        description=""
+      />
     );
 
     expect(screen.getByRole('heading', { name: /Game/i })).toBeInTheDocument();
