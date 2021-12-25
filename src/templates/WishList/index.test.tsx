@@ -4,8 +4,10 @@ import { renderWithTheme } from 'utils/tests/helpers';
 import gamesMock from 'components/GameCardSlider/mock';
 import highlightMock from 'components/Highlight/mock';
 import Wishlist from '.';
+import type { WishlistTemplateProps } from '.';
 
-const props = {
+const props: WishlistTemplateProps = {
+  games: gamesMock,
   recommendedHighlight: highlightMock,
   recommendedGames: gamesMock,
 };
@@ -26,6 +28,8 @@ describe('<Wishlist />', () => {
     expect(
       screen.getByRole('heading', { name: /wishlist/i })
     ).toBeInTheDocument();
+
+    expect(screen.getAllByText(/population zero/i)).toHaveLength(6);
     expect(screen.getByTestId('Mock Showcase')).toBeInTheDocument();
   });
 });
