@@ -76,3 +76,12 @@ export const Price = styled.div`
     `;
   }}
 `;
+
+export const DownloadLink = styled.a`
+  ${({ theme }) => {
+    return css`
+      color: ${theme.colors.primary};
+      margin-left: ${theme.spacings.xxsmall};
+    `;
+  }}
+`;

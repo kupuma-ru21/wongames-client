@@ -35,6 +35,7 @@
     "@babel/preset-typescript": "^7.16.5",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/react": "^6.4.9",
+    "@styled-icons/boxicons-solid": "^10.38.0",
     "@styled-icons/material-outlined": "^10.34.0",
     "@styled-icons/remix-fill": "^10.18.0",
     "@testing-library/jest-dom": "^5.16.1",

@@ -15,3 +15,11 @@ export default {
 export const Default: Story<GameItemProps> = (args) => {
   return <GameItem {...args} />;
 };
+
+export const WithPayment: Story<GameItemProps> = (args) => {
+  return <GameItem {...args} />;
+};
+
+WithPayment.args = {
+  downloadLink: 'https://wongames.com/game/download/21312ndasd',
+};
