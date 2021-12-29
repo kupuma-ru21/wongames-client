@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Story, Meta } from '@storybook/react/types-6-0';
 import type { GameInfoProps } from '.';
 import GameInfo from '.';
 import mockGame from './mock';

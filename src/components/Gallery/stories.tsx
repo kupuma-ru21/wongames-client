@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Story, Meta } from '@storybook/react/types-6-0';
 import Gallery, { type GalleryProps } from '.';
 import items from './mock';
 

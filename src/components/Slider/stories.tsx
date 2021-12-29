@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Story, Meta } from '@storybook/react/types-6-0';
 import type { Settings } from 'react-slick';
 import styled from 'styled-components';
 import Slider from '.';
