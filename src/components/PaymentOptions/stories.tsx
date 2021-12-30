@@ -7,8 +7,14 @@ export default {
   title: 'PaymentOptions',
   component: PaymentOptions,
   args: { cards: cardsMock },
-} as Meta;
+  argTypes: { cards: { type: '' }, handlePayment: { action: 'clicked' } },
+  parameters: { backgrounds: { default: 'won-dark' } },
+} as unknown as Meta;
 
 export const Default: Story<PaymentOptionsProps> = (args) => {
-  return <PaymentOptions {...args} />;
+  return (
+    <div style={{ padding: 16, maxWidth: 400 }}>
+      <PaymentOptions {...args} />
+    </div>
+  );
 };
