@@ -19,6 +19,7 @@ type WrapperModifiers = {
   fullWidth: () => FlattenSimpleInterpolation;
   withIcon: ReturnStyleFunc;
   minimal: ReturnStyleFunc;
+  disabled: () => FlattenSimpleInterpolation;
 };
 
 const wrapperModifiers: WrapperModifiers = {
@@ -66,10 +67,18 @@ const wrapperModifiers: WrapperModifiers = {
       }
     `;
   },
+  disabled: () => {
+    return css`
+      &:disabled {
+        cursor: not-allowed;
+        filter: saturate(30%);
+      }
+    `;
+  },
 };
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, size, fullWidth, hasIcon, minimal }) => {
+  ${({ theme, size, fullWidth, hasIcon, minimal, disabled }) => {
     return css`
       display: inline-flex;
       align-items: center;
@@ -90,8 +99,9 @@ export const Wrapper = styled.button<WrapperProps>`
 
       ${!!size && wrapperModifiers[size](theme)};
       ${!!fullWidth && wrapperModifiers.fullWidth()};
-      ${!!hasIcon && wrapperModifiers.withIcon(theme)}
+      ${!!hasIcon && wrapperModifiers.withIcon(theme)};
       ${!!minimal && wrapperModifiers.minimal(theme)};
+      ${disabled && wrapperModifiers.disabled()};
     `;
   }}
 `;
