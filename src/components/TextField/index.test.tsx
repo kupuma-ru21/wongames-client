@@ -8,25 +8,25 @@ describe('<TextField />', () => {
   it('Renders with Label', () => {
     renderWithTheme(<TextField label="Label" name="Label" />);
 
-    expect(screen.getByLabelText('Label')).toBeInTheDocument();
+    expect(screen.getByLabelText('Label'));
   });
 
   it('Renders without Label', () => {
     renderWithTheme(<TextField />);
 
-    expect(screen.queryByLabelText('Label')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('Label')).not;
   });
 
   it('Renders with placeholder', () => {
     renderWithTheme(<TextField placeholder="hey you" />);
 
-    expect(screen.getByPlaceholderText('hey you')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('hey you'));
   });
 
   it('Renders with Icon', () => {
     renderWithTheme(<TextField icon={<Email data-testid="icon" />} />);
 
-    expect(screen.getByTestId('icon')).toBeInTheDocument();
+    expect(screen.getByTestId('icon'));
   });
 
   it('Renders with Icon on the right side', () => {
@@ -86,7 +86,7 @@ describe('<TextField />', () => {
       />
     );
 
-    expect(screen.getByText('Error message')).toBeInTheDocument();
+    expect(screen.getByText('Error message'));
 
     expect(container.firstChild).toMatchSnapshot();
   });

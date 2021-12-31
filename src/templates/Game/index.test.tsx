@@ -67,17 +67,17 @@ jest.mock('components/Showcase', () => {
 describe('<Game />', () => {
   it('should render the template with components', () => {
     renderWithTheme(<Game {...props} />);
-    expect(screen.getByTestId('Mock Gallery')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock GameDetails')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock GameInfo')).toBeInTheDocument();
+    expect(screen.getByTestId('Mock Gallery'));
+    expect(screen.getByTestId('Mock GameDetails'));
+    expect(screen.getByTestId('Mock GameInfo'));
     expect(screen.getAllByTestId('Mock Showcase')).toHaveLength(2);
-    expect(screen.getByText(/custom html/i)).toBeInTheDocument();
+    expect(screen.getByText(/custom html/i));
   });
 
   it('should not render the gallery if no images', () => {
     renderWithTheme(<Game {...props} gallery={undefined} />);
 
-    expect(screen.queryByTestId('Mock Gallery')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('Mock Gallery')).not;
   });
 
   it('should not render the gallery on mobile', () => {

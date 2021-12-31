@@ -11,21 +11,15 @@ describe('<TextContent />', () => {
   it('should render the title and content', () => {
     renderWithTheme(<TextContent {...props} />);
 
-    expect(
-      screen.getByRole('heading', { name: /description/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /description/i }));
 
-    expect(
-      screen.getByRole('heading', { name: /content/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /content/i }));
   });
 
   it('should render without title', () => {
     renderWithTheme(<TextContent content={props.content} />);
 
-    expect(
-      screen.queryByRole('heading', { name: /description/i })
-    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /description/i })).not;
   });
 
   it('should render the title and content', () => {

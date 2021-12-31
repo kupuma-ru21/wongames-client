@@ -14,16 +14,14 @@ describe('<GameItem />', () => {
   it('should render the item', () => {
     renderWithTheme(<GameItem {...props} />);
 
-    expect(
-      screen.getByRole('heading', { name: props.title })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: props.title }));
 
     expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
       'src',
       props.img
     );
 
-    expect(screen.getByText('R$ 215,00')).toBeInTheDocument();
+    expect(screen.getByText('R$ 215,00'));
   });
 
   it('should render the item with download link', () => {
@@ -51,7 +49,7 @@ describe('<GameItem />', () => {
       paymentInfo.img
     );
 
-    expect(screen.getByText(paymentInfo.number)).toBeInTheDocument();
-    expect(screen.getByText(paymentInfo.purchaseDate)).toBeInTheDocument();
+    expect(screen.getByText(paymentInfo.number));
+    expect(screen.getByText(paymentInfo.purchaseDate));
   });
 });

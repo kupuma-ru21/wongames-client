@@ -10,8 +10,8 @@ describe('<Checkbox />', () => {
       <Checkbox label="checkbox label" labelFor="check" />
     );
 
-    expect(screen.getByRole('checkbox')).toBeInTheDocument();
-    expect(screen.getByLabelText(/checkbox label/i)).toBeInTheDocument();
+    expect(screen.getByRole('checkbox'));
+    expect(screen.getByLabelText(/checkbox label/i));
     expect(screen.getByText(/checkbox label/i)).toHaveAttribute('for', 'check');
 
     expect(container.firstChild).toMatchSnapshot();
@@ -20,7 +20,7 @@ describe('<Checkbox />', () => {
   it('should render without label', () => {
     renderWithTheme(<Checkbox />);
 
-    expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('Checkbox')).not;
   });
 
   it('should render with black label', () => {

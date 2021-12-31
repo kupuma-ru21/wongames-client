@@ -42,7 +42,7 @@ describe('<Home />', () => {
   it('should render banner and showcases', () => {
     renderWithTheme(<Home {...props} />);
 
-    expect(screen.getByTestId('Mock Banner Slider')).toBeInTheDocument();
+    expect(screen.getByTestId('Mock Banner Slider'));
     expect(screen.getAllByTestId('Mock Showcase')).toHaveLength(5);
   });
 });

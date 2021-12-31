@@ -11,7 +11,7 @@ describe('<Radio />', () => {
     );
 
     const label = screen.getByText('Radio');
-    expect(label).toBeInTheDocument();
+    expect(label);
     expect(label).toHaveStyle({ color: theme.colors.white });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -20,14 +20,14 @@ describe('<Radio />', () => {
     renderWithTheme(<Radio label="Radio" labelColor="black" />);
 
     const label = screen.getByText('Radio');
-    expect(label).toBeInTheDocument();
+    expect(label);
     expect(label).toHaveStyle({ color: theme.colors.black });
   });
 
   it('should render without label', () => {
     renderWithTheme(<Radio />);
 
-    expect(screen.queryByLabelText('Radio')).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('Radio')).not;
   });
 
   it('should dispatch onCheck when label status changes', async () => {

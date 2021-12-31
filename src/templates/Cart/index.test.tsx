@@ -64,18 +64,16 @@ describe('<Cart />', () => {
   it('should render sections', () => {
     renderWithTheme(<Cart {...props} />);
 
-    expect(
-      screen.getByRole('heading', { name: /my cart/i })
-    ).toBeInTheDocument();
-    expect(screen.getByTestId('Mock Cart')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock PaymentOptions')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock Showcase')).toBeInTheDocument();
-    expect(screen.queryByTestId('Mock Empty')).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /my cart/i }));
+    expect(screen.getByTestId('Mock Cart'));
+    expect(screen.getByTestId('Mock PaymentOptions'));
+    expect(screen.getByTestId('Mock Showcase'));
+    expect(screen.queryByTestId('Mock Empty')).not;
   });
 
   it('should render empty section if there are no items', () => {
     renderWithTheme(<Cart {...props} items={[]} />);
 
-    expect(screen.getByTestId('Mock Empty')).toBeInTheDocument();
+    expect(screen.getByTestId('Mock Empty'));
   });
 });

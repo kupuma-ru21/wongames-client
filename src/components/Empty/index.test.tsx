@@ -15,13 +15,11 @@ describe('<Empty />', () => {
       screen.getByRole('image', {
         name: /a gamer in a couch playing videogame/i,
       })
-    ).toBeInTheDocument();
+    );
 
-    expect(
-      screen.getByRole('heading', { name: /a simple title/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /a simple title/i }));
 
-    expect(screen.getByText(/a simple description/i)).toBeInTheDocument();
+    expect(screen.getByText(/a simple description/i));
 
     expect(
       screen.getByRole('link', { name: /go back to store/i })
@@ -33,8 +31,6 @@ describe('<Empty />', () => {
   it('should not render link when hasLink is not passed', () => {
     renderWithTheme(<Empty {...props} />);
 
-    expect(
-      screen.queryByRole('link', { name: /go back to store/i })
-    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: /go back to store/i })).not;
   });
 });

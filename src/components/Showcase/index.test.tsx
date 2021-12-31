@@ -15,17 +15,11 @@ describe('<Showcase />', () => {
   it('should render full showcase', () => {
     renderWithTheme(<Showcase {...props} />);
 
-    expect(
-      screen.getByRole('heading', { name: /most popular/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /most popular/i }));
 
-    expect(
-      screen.getByRole('heading', { name: highlightMock.title })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: highlightMock.title }));
 
-    expect(
-      screen.getByRole('heading', { name: gamesMock[0].title })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: gamesMock[0].title }));
   });
 
   it('should render without title', () => {
@@ -36,9 +30,7 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: highlightMock.title });
     screen.getByRole('heading', { name: gamesMock[0].title });
 
-    expect(
-      screen.queryByRole('heading', { name: /most popular/i })
-    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /most popular/i })).not;
   });
 
   it('should render without highlight', () => {
@@ -47,9 +39,7 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: /most popular/i });
     screen.getByRole('heading', { name: gamesMock[0].title });
 
-    expect(
-      screen.queryByRole('heading', { name: highlightMock.title })
-    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: highlightMock.title })).not;
   });
 
   it('should render without games', () => {
@@ -60,8 +50,6 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: /most popular/i });
     screen.getByRole('heading', { name: highlightMock.title });
 
-    expect(
-      screen.queryByRole('heading', { name: gamesMock[0].title })
-    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: gamesMock[0].title })).not;
   });
 });

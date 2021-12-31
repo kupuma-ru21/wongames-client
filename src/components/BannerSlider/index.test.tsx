@@ -8,7 +8,7 @@ describe('<BannerSlider />', () => {
   it('should render vertical slider', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />);
 
-    expect(container.querySelector('.slick-vertical')).toBeInTheDocument();
+    expect(container.querySelector('.slick-vertical'));
   });
 
   it('should render with 1 active item', () => {
@@ -19,16 +19,16 @@ describe('<BannerSlider />', () => {
 
     expect(
       screen.getByRole('heading', { name: /defy death 1/i, hidden: false })
-    ).toBeInTheDocument();
+    );
 
     expect(
       screen.getByRole('heading', { name: /defy death 2/i, hidden: true })
-    ).toBeInTheDocument();
+    );
   });
 
   it('should render with the dots', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />);
 
-    expect(container.querySelector('.slick-dots')).toBeInTheDocument();
+    expect(container.querySelector('.slick-dots'));
   });
 });
