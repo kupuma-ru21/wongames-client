@@ -37,9 +37,9 @@ describe('<Games />', () => {
       <Games filterItems={filterItemsMock} games={[gamesMock[0]]} />
     );
 
-    expect(screen.getByTestId('Mock ExploreSidebar'));
-    expect(screen.getByTestId('Mock GameCard'));
+    screen.getByTestId('Mock ExploreSidebar');
+    screen.getByTestId('Mock GameCard');
 
-    expect(screen.getByRole('button', { name: /show more/i }));
+    screen.getByRole('button', { name: /show more/i });
   });
 });

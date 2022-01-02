@@ -7,7 +7,7 @@ describe('<Ribbon />', () => {
   it('should render the text correctly', () => {
     const { container } = renderWithTheme(<Ribbon>Best Seller</Ribbon>);
 
-    expect(screen.getByText(/Best Seller/i));
+    screen.getByText(/Best Seller/i);
     expect(container.firstChild).toMatchSnapshot();
   });
 

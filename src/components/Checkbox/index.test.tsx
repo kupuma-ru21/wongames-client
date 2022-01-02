@@ -10,8 +10,8 @@ describe('<Checkbox />', () => {
       <Checkbox label="checkbox label" labelFor="check" />
     );
 
-    expect(screen.getByRole('checkbox'));
-    expect(screen.getByLabelText(/checkbox label/i));
+    screen.getByRole('checkbox');
+    screen.getByLabelText(/checkbox label/i);
     expect(screen.getByText(/checkbox label/i)).toHaveAttribute('for', 'check');
 
     expect(container.firstChild).toMatchSnapshot();

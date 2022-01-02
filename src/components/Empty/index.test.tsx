@@ -11,15 +11,13 @@ describe('<Empty />', () => {
   it('should render correctly', () => {
     const { container } = renderWithTheme(<Empty {...props} hasLink />);
 
-    expect(
-      screen.getByRole('image', {
-        name: /a gamer in a couch playing videogame/i,
-      })
-    );
+    screen.getByRole('image', {
+      name: /a gamer in a couch playing videogame/i,
+    });
 
-    expect(screen.getByRole('heading', { name: /a simple title/i }));
+    screen.getByRole('heading', { name: /a simple title/i });
 
-    expect(screen.getByText(/a simple description/i));
+    screen.getByText(/a simple description/i);
 
     expect(
       screen.getByRole('link', { name: /go back to store/i })

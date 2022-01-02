@@ -29,8 +29,8 @@ describe('<Base />', () => {
       </Base>
     );
 
-    expect(screen.getByTestId('Mock Menu'));
-    expect(screen.getByTestId('Mock Footer'));
-    expect(screen.getByRole('heading', { name: /heading/i }));
+    screen.getByTestId('Mock Menu');
+    screen.getByTestId('Mock Footer');
+    screen.getByRole('heading', { name: /heading/i });
   });
 });

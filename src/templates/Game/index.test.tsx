@@ -67,11 +67,11 @@ jest.mock('components/Showcase', () => {
 describe('<Game />', () => {
   it('should render the template with components', () => {
     renderWithTheme(<Game {...props} />);
-    expect(screen.getByTestId('Mock Gallery'));
-    expect(screen.getByTestId('Mock GameDetails'));
-    expect(screen.getByTestId('Mock GameInfo'));
+    screen.getByTestId('Mock Gallery');
+    screen.getByTestId('Mock GameDetails');
+    screen.getByTestId('Mock GameInfo');
     expect(screen.getAllByTestId('Mock Showcase')).toHaveLength(2);
-    expect(screen.getByText(/custom html/i));
+    screen.getByText(/custom html/i);
   });
 
   it('should not render the gallery if no images', () => {

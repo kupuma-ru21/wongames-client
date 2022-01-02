@@ -25,7 +25,7 @@ describe('<OrdersList />', () => {
   it('should render the game items', () => {
     renderWithTheme(<OrdersList items={mock} />);
 
-    expect(screen.getByRole('heading', { name: /my orders/i }));
+    screen.getByRole('heading', { name: /my orders/i });
 
     expect(screen.getAllByTestId('Mock GameItem')).toHaveLength(2);
   });
@@ -33,6 +33,6 @@ describe('<OrdersList />', () => {
   it('should render empty state', () => {
     renderWithTheme(<OrdersList />);
 
-    expect(screen.getByTestId('Mock Empty'));
+    screen.getByTestId('Mock Empty');
   });
 });

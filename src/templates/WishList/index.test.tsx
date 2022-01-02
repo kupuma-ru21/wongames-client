@@ -25,10 +25,10 @@ describe('<Wishlist />', () => {
   it('should render correctly', () => {
     renderWithTheme(<Wishlist {...props} />);
 
-    expect(screen.getByRole('heading', { name: /wishlist/i }));
+    screen.getByRole('heading', { name: /wishlist/i });
 
     expect(screen.getAllByText(/population zero/i)).toHaveLength(6);
-    expect(screen.getByTestId('Mock Showcase'));
+    screen.getByTestId('Mock Showcase');
   });
 
   it('should render empty when there are no games', () => {
@@ -41,6 +41,6 @@ describe('<Wishlist />', () => {
 
     expect(screen.queryByText(/population zero/i)).toBe(null);
 
-    expect(screen.getByRole('heading', { name: /your wishlist is empty/i }));
+    screen.getByRole('heading', { name: /your wishlist is empty/i });
   });
 });

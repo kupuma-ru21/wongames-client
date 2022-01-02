@@ -6,15 +6,15 @@ describe('<FormProfile />', () => {
   it('should render the profile form', () => {
     renderWithTheme(<FormProfile />);
 
-    expect(screen.getByRole('heading', { name: /my profile/i }));
+    screen.getByRole('heading', { name: /my profile/i });
 
-    expect(screen.getByRole('textbox', { name: /name/i }));
-    expect(screen.getByRole('textbox', { name: /e-mail/i }));
+    screen.getByRole('textbox', { name: /name/i });
+    screen.getByRole('textbox', { name: /e-mail/i });
 
-    expect(screen.getByPlaceholderText(/type your password/i));
+    screen.getByPlaceholderText(/type your password/i);
 
-    expect(screen.getByPlaceholderText(/new password/i));
+    screen.getByPlaceholderText(/new password/i);
 
-    expect(screen.getByRole('button', { name: /save/i }));
+    screen.getByRole('button', { name: /save/i });
   });
 });

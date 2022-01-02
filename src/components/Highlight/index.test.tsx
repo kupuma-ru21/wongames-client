@@ -15,11 +15,11 @@ describe('<Highlight />', () => {
   it('should render headings and button', () => {
     const { container } = renderWithTheme(<Highlight {...props} />);
 
-    expect(screen.getByRole('heading', { name: /heading 1/i }));
+    screen.getByRole('heading', { name: /heading 1/i });
 
-    expect(screen.getByRole('heading', { name: /heading 2/i }));
+    screen.getByRole('heading', { name: /heading 2/i });
 
-    expect(screen.getByRole('link', { name: /buy now/i }));
+    screen.getByRole('link', { name: /buy now/i });
 
     expect(container.firstChild).toMatchSnapshot();
   });

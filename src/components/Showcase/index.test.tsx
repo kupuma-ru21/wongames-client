@@ -15,11 +15,11 @@ describe('<Showcase />', () => {
   it('should render full showcase', () => {
     renderWithTheme(<Showcase {...props} />);
 
-    expect(screen.getByRole('heading', { name: /most popular/i }));
+    screen.getByRole('heading', { name: /most popular/i });
 
-    expect(screen.getByRole('heading', { name: highlightMock.title }));
+    screen.getByRole('heading', { name: highlightMock.title });
 
-    expect(screen.getByRole('heading', { name: gamesMock[0].title }));
+    screen.getByRole('heading', { name: gamesMock[0].title });
   });
 
   it('should render without title', () => {

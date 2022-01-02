@@ -14,13 +14,11 @@ describe('<Banner />', () => {
   it('should render correctly', () => {
     const { container } = renderWithTheme(<Banner {...props} />);
 
-    expect(screen.getByRole('heading', { name: /Defy death/i }));
+    screen.getByRole('heading', { name: /Defy death/i });
 
-    expect(
-      screen.getByRole('heading', { name: /Play the new CrashLands season/i })
-    );
+    screen.getByRole('heading', { name: /Play the new CrashLands season/i });
 
-    expect(screen.getByRole('img', { name: /Defy death/i }));
+    screen.getByRole('img', { name: /Defy death/i });
 
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -37,7 +35,6 @@ describe('<Banner />', () => {
 
     const ribbon = screen.getByText(/My Ribbon/i);
 
-    expect(ribbon);
     expect(ribbon).toHaveStyle({ backgroundColor: '#3CD3C1' });
     expect(ribbon).toHaveStyle({ height: '2.6rem', fontSize: '1.2rem' });
   });

@@ -11,7 +11,6 @@ describe('<Radio />', () => {
     );
 
     const label = screen.getByText('Radio');
-    expect(label);
     expect(label).toHaveStyle({ color: theme.colors.white });
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -20,7 +19,6 @@ describe('<Radio />', () => {
     renderWithTheme(<Radio label="Radio" labelColor="black" />);
 
     const label = screen.getByText('Radio');
-    expect(label);
     expect(label).toHaveStyle({ color: theme.colors.black });
   });
 

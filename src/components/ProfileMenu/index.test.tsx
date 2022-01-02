@@ -7,11 +7,11 @@ describe('<ProfileMenu />', () => {
   it('should render the menu', () => {
     const { container } = renderWithTheme(<ProfileMenu />);
 
-    expect(screen.getByRole('link', { name: /my profile/i }));
+    screen.getByRole('link', { name: /my profile/i });
 
-    expect(screen.getByRole('link', { name: /my cards/i }));
-    expect(screen.getByRole('link', { name: /my orders/i }));
-    expect(screen.getByRole('link', { name: /sign out/i }));
+    screen.getByRole('link', { name: /my cards/i });
+    screen.getByRole('link', { name: /my orders/i });
+    screen.getByRole('link', { name: /sign out/i });
 
     expect(container.firstChild).toMatchSnapshot();
   });

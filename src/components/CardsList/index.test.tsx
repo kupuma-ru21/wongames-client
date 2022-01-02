@@ -7,7 +7,7 @@ describe('<CardsList />', () => {
   it('should render the cards list', () => {
     renderWithTheme(<CardsList cards={cardsMock} />);
 
-    expect(screen.getByRole('heading', { name: /my cards/i }));
+    screen.getByRole('heading', { name: /my cards/i });
 
     expect(screen.getByRole('img', { name: /visa/i })).toHaveAttribute(
       'src',
@@ -19,7 +19,7 @@ describe('<CardsList />', () => {
       '/img/master-card.png'
     );
 
-    expect(screen.getByText(/4325/));
-    expect(screen.getByText(/4326/));
+    screen.getByText(/4325/);
+    screen.getByText(/4326/);
   });
 });

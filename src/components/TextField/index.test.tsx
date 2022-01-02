@@ -8,7 +8,7 @@ describe('<TextField />', () => {
   it('Renders with Label', () => {
     renderWithTheme(<TextField label="Label" name="Label" />);
 
-    expect(screen.getByLabelText('Label'));
+    screen.getByLabelText('Label');
   });
 
   it('Renders without Label', () => {
@@ -20,13 +20,13 @@ describe('<TextField />', () => {
   it('Renders with placeholder', () => {
     renderWithTheme(<TextField placeholder="hey you" />);
 
-    expect(screen.getByPlaceholderText('hey you'));
+    screen.getByPlaceholderText('hey you');
   });
 
   it('Renders with Icon', () => {
     renderWithTheme(<TextField icon={<Email data-testid="icon" />} />);
 
-    expect(screen.getByTestId('icon'));
+    screen.getByTestId('icon');
   });
 
   it('Renders with Icon on the right side', () => {
@@ -86,7 +86,7 @@ describe('<TextField />', () => {
       />
     );
 
-    expect(screen.getByText('Error message'));
+    screen.getByText('Error message');
 
     expect(container.firstChild).toMatchSnapshot();
   });

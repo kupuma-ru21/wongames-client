@@ -43,8 +43,8 @@ describe('<Button />', () => {
     renderWithTheme(
       <Button icon={<AddShoppingCart data-testid="icon" />}>Buy now</Button>
     );
-    expect(screen.getByText(/buy now/i));
-    expect(screen.getByTestId('icon'));
+    screen.getByText(/buy now/i);
+    screen.getByTestId('icon');
   });
 
   it('should render a minimal version', () => {

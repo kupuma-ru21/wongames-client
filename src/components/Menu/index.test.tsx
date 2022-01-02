@@ -5,9 +5,9 @@ import Menu from '.';
 describe('<Menu />', () => {
   it('should render the menu', () => {
     renderWithTheme(<Menu />);
-    expect(screen.getByLabelText(/open menu/i));
-    expect(screen.getByLabelText(/search/i));
-    expect(screen.getByLabelText(/open shopping cart/i));
+    screen.getByLabelText(/open menu/i);
+    screen.getByLabelText(/search/i);
+    screen.getByLabelText(/open shopping cart/i);
   });
 
   it('should handle the open/close mobile menu', () => {
@@ -30,15 +30,15 @@ describe('<Menu />', () => {
 
     expect(screen.queryByText(/my account/i)).toBe(null);
     expect(screen.queryByText(/wishlist/i)).toBe(null);
-    expect(screen.getByText(/sign up/i));
+    screen.getByText(/sign up/i);
     expect(screen.getAllByText(/sign in/i)).toHaveLength(2);
   });
 
   it('should show wishlight and account when logged in', () => {
     renderWithTheme(<Menu username="will" />);
 
-    expect(screen.getByText(/my account/i));
-    expect(screen.getByText(/wishlist/i));
+    screen.getByText(/my account/i);
+    screen.getByText(/wishlist/i);
     expect(screen.queryByText(/sign in/i)).toBe(null);
     expect(screen.queryByText(/sign up/i)).toBe(null);
   });

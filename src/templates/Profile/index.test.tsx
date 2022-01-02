@@ -42,8 +42,8 @@ describe('<Profile />', () => {
   it('should render sections', () => {
     renderWithTheme(<Profile>Lorem Ipsum</Profile>);
 
-    expect(screen.getByText('Lorem Ipsum'));
-    expect(screen.getByText('My profile'));
-    expect(screen.getByTestId('Mock ProfileMenu'));
+    screen.getByText('Lorem Ipsum');
+    screen.getByText('My profile');
+    screen.getByTestId('Mock ProfileMenu');
   });
 });

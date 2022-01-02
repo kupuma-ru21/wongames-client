@@ -14,16 +14,16 @@ describe('<GameCard />', () => {
   it('should render correctly', () => {
     renderWithTheme(<GameCard {...props} />);
 
-    expect(screen.getByRole('heading', { name: props.title }));
+    screen.getByRole('heading', { name: props.title });
 
-    expect(screen.getByRole('heading', { name: props.developer }));
+    screen.getByRole('heading', { name: props.developer });
 
     expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
       'src',
       props.img
     );
 
-    expect(screen.getByLabelText(/add to wishlist/i));
+    screen.getByLabelText(/add to wishlist/i);
   });
 
   it('should render price in label', () => {
@@ -50,7 +50,7 @@ describe('<GameCard />', () => {
   it('should render a filled Favorite icon when favorite is true', () => {
     renderWithTheme(<GameCard {...props} favorite />);
 
-    expect(screen.getByLabelText(/remove from wishlist/i));
+    screen.getByLabelText(/remove from wishlist/i);
   });
 
   it('should call onFav method when favorite is clicked', () => {
@@ -75,6 +75,5 @@ describe('<GameCard />', () => {
 
     expect(ribbon).toHaveStyle({ backgroundColor: '#3CD3C1' });
     expect(ribbon).toHaveStyle({ height: '2.6rem', fontSize: '1.2rem' });
-    expect(ribbon);
   });
 });

@@ -8,9 +8,9 @@ describe('<PaymentOptions />', () => {
   it('should render the saved card options and the add new card button', () => {
     renderWithTheme(<PaymentOptions cards={cards} handlePayment={jest.fn} />);
 
-    expect(screen.getByLabelText(/4325/));
-    expect(screen.getByLabelText(/4326/));
-    expect(screen.getByText(/add a new credit card/i));
+    screen.getByLabelText(/4325/);
+    screen.getByLabelText(/4326/);
+    screen.getByText(/add a new credit card/i);
   });
 
   it('should handle select card when clicking on the label', async () => {

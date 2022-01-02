@@ -11,9 +11,9 @@ describe('<TextContent />', () => {
   it('should render the title and content', () => {
     renderWithTheme(<TextContent {...props} />);
 
-    expect(screen.getByRole('heading', { name: /description/i }));
+    screen.getByRole('heading', { name: /description/i });
 
-    expect(screen.getByRole('heading', { name: /content/i }));
+    screen.getByRole('heading', { name: /content/i });
   });
 
   it('should render without title', () => {
