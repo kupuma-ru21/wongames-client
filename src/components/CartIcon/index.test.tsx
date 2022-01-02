@@ -6,21 +6,21 @@ describe('<CartIcon />', () => {
   it('should render without badge', () => {
     renderWithTheme(<CartIcon />);
 
-    expect(screen.getByLabelText(/shopping cart/i)).toBeInTheDocument();
-    expect(screen.queryByLabelText(/cart items/i)).not.toBeInTheDocument();
+    expect(screen.getByLabelText(/shopping cart/i));
+    expect(screen.queryByLabelText(/cart items/i)).toBe(null);
   });
 
   it('should render with badge', () => {
     renderWithTheme(<CartIcon quantity={3} />);
 
-    expect(screen.getByLabelText(/cart items/i)).toBeInTheDocument();
-    expect(screen.getByText(/3/)).toBeInTheDocument();
+    expect(screen.getByLabelText(/cart items/i));
+    expect(screen.getByText(/3/));
   });
 
   it('should render with badge only if has positive numbers', () => {
     renderWithTheme(<CartIcon quantity={-1} />);
 
-    expect(screen.queryByLabelText(/cart items/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/-1/)).not.toBeInTheDocument();
+    expect(screen.queryByLabelText(/cart items/i)).toBe(null);
+    expect(screen.queryByText(/-1/)).toBe(null);
   });
 });

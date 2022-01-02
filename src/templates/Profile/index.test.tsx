@@ -42,8 +42,8 @@ describe('<Profile />', () => {
   it('should render sections', () => {
     renderWithTheme(<Profile>Lorem Ipsum</Profile>);
 
-    expect(screen.getByText('Lorem Ipsum')).toBeInTheDocument();
-    expect(screen.getByText('My profile')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock ProfileMenu')).toBeInTheDocument();
+    expect(screen.getByText('Lorem Ipsum'));
+    expect(screen.getByText('My profile'));
+    expect(screen.getByTestId('Mock ProfileMenu'));
   });
 });
