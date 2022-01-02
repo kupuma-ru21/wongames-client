@@ -27,7 +27,7 @@ describe('<Radio />', () => {
   it('should render without label', () => {
     renderWithTheme(<Radio />);
 
-    expect(screen.queryByLabelText('Radio')).not;
+    expect(screen.queryByLabelText('Radio')).toBe(null);
   });
 
   it('should dispatch onCheck when label status changes', async () => {

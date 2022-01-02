@@ -14,7 +14,7 @@ describe('<TextField />', () => {
   it('Renders without Label', () => {
     renderWithTheme(<TextField />);
 
-    expect(screen.queryByLabelText('Label')).not;
+    expect(screen.queryByLabelText('Label')).toBe(null);
   });
 
   it('Renders with placeholder', () => {

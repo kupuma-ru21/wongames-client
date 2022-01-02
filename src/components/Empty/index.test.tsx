@@ -31,6 +31,8 @@ describe('<Empty />', () => {
   it('should not render link when hasLink is not passed', () => {
     renderWithTheme(<Empty {...props} />);
 
-    expect(screen.queryByRole('link', { name: /go back to store/i })).not;
+    expect(screen.queryByRole('link', { name: /go back to store/i })).toBe(
+      null
+    );
   });
 });

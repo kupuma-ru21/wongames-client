@@ -77,7 +77,7 @@ describe('<Game />', () => {
   it('should not render the gallery if no images', () => {
     renderWithTheme(<Game {...props} gallery={undefined} />);
 
-    expect(screen.queryByTestId('Mock Gallery')).not;
+    expect(screen.queryByTestId('Mock Gallery')).toBe(null);
   });
 
   it('should not render the gallery on mobile', () => {

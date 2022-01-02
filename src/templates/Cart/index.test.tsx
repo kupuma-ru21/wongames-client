@@ -68,7 +68,7 @@ describe('<Cart />', () => {
     expect(screen.getByTestId('Mock Cart'));
     expect(screen.getByTestId('Mock PaymentOptions'));
     expect(screen.getByTestId('Mock Showcase'));
-    expect(screen.queryByTestId('Mock Empty')).not;
+    expect(screen.queryByTestId('Mock Empty')).toBe(null);
   });
 
   it('should render empty section if there are no items', () => {

@@ -20,7 +20,7 @@ describe('<Checkbox />', () => {
   it('should render without label', () => {
     renderWithTheme(<Checkbox />);
 
-    expect(screen.queryByLabelText('Checkbox')).not;
+    expect(screen.queryByLabelText('Checkbox')).toBe(null);
   });
 
   it('should render with black label', () => {

@@ -39,7 +39,7 @@ describe('<Wishlist />', () => {
       />
     );
 
-    expect(screen.queryByText(/population zero/i)).not;
+    expect(screen.queryByText(/population zero/i)).toBe(null);
 
     expect(screen.getByRole('heading', { name: /your wishlist is empty/i }));
   });

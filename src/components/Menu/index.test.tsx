@@ -28,8 +28,8 @@ describe('<Menu />', () => {
   it('should show register box when logged out', () => {
     renderWithTheme(<Menu />);
 
-    expect(screen.queryByText(/my account/i)).not;
-    expect(screen.queryByText(/wishlist/i)).not;
+    expect(screen.queryByText(/my account/i)).toBe(null);
+    expect(screen.queryByText(/wishlist/i)).toBe(null);
     expect(screen.getByText(/sign up/i));
     expect(screen.getAllByText(/sign in/i)).toHaveLength(2);
   });
@@ -39,7 +39,7 @@ describe('<Menu />', () => {
 
     expect(screen.getByText(/my account/i));
     expect(screen.getByText(/wishlist/i));
-    expect(screen.queryByText(/sign in/i)).not;
-    expect(screen.queryByText(/sign up/i)).not;
+    expect(screen.queryByText(/sign in/i)).toBe(null);
+    expect(screen.queryByText(/sign up/i)).toBe(null);
   });
 });

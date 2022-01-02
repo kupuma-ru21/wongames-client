@@ -19,7 +19,7 @@ describe('<TextContent />', () => {
   it('should render without title', () => {
     renderWithTheme(<TextContent content={props.content} />);
 
-    expect(screen.queryByRole('heading', { name: /description/i })).not;
+    expect(screen.queryByRole('heading', { name: /description/i })).toBe(null);
   });
 
   it('should render the title and content', () => {

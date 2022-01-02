@@ -30,7 +30,7 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: highlightMock.title });
     screen.getByRole('heading', { name: gamesMock[0].title });
 
-    expect(screen.queryByRole('heading', { name: /most popular/i })).not;
+    expect(screen.queryByRole('heading', { name: /most popular/i })).toBe(null);
   });
 
   it('should render without highlight', () => {
@@ -39,7 +39,9 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: /most popular/i });
     screen.getByRole('heading', { name: gamesMock[0].title });
 
-    expect(screen.queryByRole('heading', { name: highlightMock.title })).not;
+    expect(screen.queryByRole('heading', { name: highlightMock.title })).toBe(
+      null
+    );
   });
 
   it('should render without games', () => {
@@ -50,6 +52,8 @@ describe('<Showcase />', () => {
     screen.getByRole('heading', { name: /most popular/i });
     screen.getByRole('heading', { name: highlightMock.title });
 
-    expect(screen.queryByRole('heading', { name: gamesMock[0].title })).not;
+    expect(screen.queryByRole('heading', { name: gamesMock[0].title })).toBe(
+      null
+    );
   });
 });
