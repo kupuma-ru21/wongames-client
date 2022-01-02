@@ -26,3 +26,11 @@ export const WithButton: Story<CartListProps> = (args) => {
     </div>
   );
 };
+
+export const Empty: Story<CartListProps> = () => {
+  return (
+    <div style={{ maxWidth: 800 }}>
+      <CartList />
+    </div>
+  );
+};
