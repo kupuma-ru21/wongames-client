@@ -2,7 +2,7 @@ import { tint } from 'polished';
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.div`
   ${({ theme }) => {
     return css`
       background: ${theme.colors.white};
@@ -22,6 +22,7 @@ export const Footer = styled.div`
       font-size: ${theme.font.sizes.small};
       padding: 2rem;
       display: flex;
+      align-items: center;
       justify-content: space-between;
       ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.medium};
