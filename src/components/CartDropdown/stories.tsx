@@ -10,12 +10,12 @@ export default {
   parameters: { backgrounds: { default: 'won-dark' } },
 } as Meta;
 
-export const Default: Story<CartDropdownProps> = () => {
+export const Default: Story<CartDropdownProps> = (args) => {
   return (
     <div
       style={{ maxWidth: '98%', display: 'flex', justifyContent: 'flex-end' }}
     >
-      <CartDropdown />
+      <CartDropdown {...args} />
     </div>
   );
 };
