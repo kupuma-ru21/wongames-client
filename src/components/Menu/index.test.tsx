@@ -1,5 +1,6 @@
-import { screen, fireEvent } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
+
 import Menu from '.';
 
 describe('<Menu />', () => {
@@ -7,7 +8,8 @@ describe('<Menu />', () => {
     renderWithTheme(<Menu />);
     screen.getByLabelText(/open menu/i);
     screen.getByLabelText(/search/i);
-    screen.getByLabelText(/open shopping cart/i);
+    screen.getByRole('img', { name: /won games/i });
+    expect(screen.getAllByLabelText(/shopping cart/i)).toHaveLength(2);
   });
 
   it('should handle the open/close mobile menu', () => {
@@ -28,7 +30,7 @@ describe('<Menu />', () => {
   it('should show register box when logged out', () => {
     renderWithTheme(<Menu />);
 
-    expect(screen.queryByText(/my account/i)).toBe(null);
+    expect(screen.queryByText(/my profile/i)).toBe(null);
     expect(screen.queryByText(/wishlist/i)).toBe(null);
     screen.getByText(/sign up/i);
     expect(screen.getAllByText(/sign in/i)).toHaveLength(2);
@@ -37,8 +39,8 @@ describe('<Menu />', () => {
   it('should show wishlight and account when logged in', () => {
     renderWithTheme(<Menu username="will" />);
 
-    screen.getByText(/my account/i);
-    screen.getByText(/wishlist/i);
+    expect(screen.getAllByText(/my profile/i)).toHaveLength(2);
+    expect(screen.getAllByText(/wishlist/i)).toHaveLength(2);
     expect(screen.queryByText(/sign in/i)).toBe(null);
     expect(screen.queryByText(/sign up/i)).toBe(null);
   });

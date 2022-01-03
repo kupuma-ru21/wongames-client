@@ -11,7 +11,7 @@ const Base = ({ children }: BaseTemplateProps) => {
   return (
     <S.Wrapper>
       <Container>
-        <Menu />
+        <Menu username="Willian" />
       </Container>
 
       <S.Content>{children}</S.Content>
