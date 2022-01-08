@@ -10,7 +10,6 @@ import * as S from './styles';
 type BannerProps = React.ComponentProps<typeof Banner>;
 
 export type HomeTemplateProps = {
-  data: unknown;
   banners: BannerProps[];
   newGames: GameCardProps[];
   mostPopularHighlight: HighlightProps;
