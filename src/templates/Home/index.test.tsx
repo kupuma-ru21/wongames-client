@@ -9,6 +9,7 @@ import Home from '.';
 type Props = React.ComponentProps<typeof Home>;
 
 const props: Props = {
+  data: {},
   banners: bannerMock,
   newGames: gamesMock,
   mostPopularHighlight: highlightMock,
