@@ -1,9 +1,11 @@
 import { fireEvent, screen } from '@testing-library/react';
 import theme from 'styles/theme';
 import { renderWithTheme } from 'utils/tests/helpers';
+import type { GameCardProps } from '.';
 import GameCard from '.';
 
-const props = {
+const props: GameCardProps = {
+  slug: 'population-zero',
   title: 'Population Zero',
   developer: 'Rockstar Games',
   img: 'https://source.unsplash.com/user/willianjusten/300x140',
@@ -12,7 +14,7 @@ const props = {
 
 describe('<GameCard />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<GameCard {...props} />);
+    const { container } = renderWithTheme(<GameCard {...props} />);
 
     screen.getByRole('heading', { name: props.title });
 
@@ -23,7 +25,14 @@ describe('<GameCard />', () => {
       props.img
     );
 
+    expect(screen.getByRole('link', { name: props.title })).toHaveAttribute(
+      'href',
+      `/game/${props.slug}`
+    );
+
     screen.getByLabelText(/add to wishlist/i);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render price in label', () => {
@@ -75,5 +84,6 @@ describe('<GameCard />', () => {
 
     expect(ribbon).toHaveStyle({ backgroundColor: '#3CD3C1' });
     expect(ribbon).toHaveStyle({ height: '2.6rem', fontSize: '1.2rem' });
+    expect(ribbon).toBeInTheDocument();
   });
 });

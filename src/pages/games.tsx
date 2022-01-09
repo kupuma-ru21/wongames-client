@@ -26,6 +26,7 @@ export async function getStaticProps() {
       games: data.games.map((game) => {
         return {
           title: game.name,
+          slug: game.slug,
           developer: game.developers[0].name,
           img: `http://localhost:1337${game.cover?.url}`,
           price: new Intl.NumberFormat('en', {
